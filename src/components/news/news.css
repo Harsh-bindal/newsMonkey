@@ -1,0 +1,11 @@
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.heading
+{
+    margin-top: 10px;
+    text-align: center;
+}
