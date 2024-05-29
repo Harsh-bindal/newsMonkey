@@ -14,12 +14,12 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>      
-        <li className="nav-item"><Link className="nav-link" to="/education">Education</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/travel">Travel</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/sport">Sports</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/SCIENCE">Science</Link></li>      
+        <li className="nav-item"><Link className="nav-link" to="/HEALTH">Health</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/BUSINESS">Business</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/TECHNOLOGY">Technology</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/SPORTS">Sports</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/ENTERTAINMENT">Entertainment</Link></li>
       </ul>
 
     </div>

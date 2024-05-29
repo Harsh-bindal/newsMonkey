@@ -2,7 +2,7 @@
 .card
 {
   position: relative;
-    width: 18rem;
+    width: 15rem;
     height: 26rem;
     margin-top: 30px;
     margin-left: 60px;
@@ -10,7 +10,7 @@
 
 .card-img-top
 {
-  height: 12rem;
+  height: 14rem;
 }
 
 

@@ -11,13 +11,13 @@ export default function App() {
 
     <Navbar></Navbar>
      <Routes>
-      <Route exact path="/" element={<News country="in" category="world" ></News>} ></Route>
-      <Route exact path="/science" element={<News country="in" category="science_and_technology" ></News>} ></Route>
-      <Route exact path="/education" element={<News country="in" category="education" ></News>} ></Route>
-      <Route exact path="/health" element={<News country="in" category="health" ></News>} ></Route>
-      <Route exact path="/travel" element={<News country="in" category="travel" ></News>} ></Route>
-      <Route exact path="/sport" element={<News country="in" category="sport" ></News>} ></Route>
-      <Route exact path="/entertainment" element={<News country="in" category="entertainment" ></News>} ></Route>
+      <Route exact path="/" element={<News category="WORLD" country="in" ></News>} ></Route>
+      <Route exact path="/SCIENCE" element={<News country="in" category="SCIENCE" ></News>} ></Route>
+      <Route exact path="/HEALTH" element={<News country="in" category="HEALTH" ></News>} ></Route>
+      <Route exact path="/BUSINESS" element={<News country="in" category="BUSINESS" ></News>} ></Route>
+      <Route exact path="/TECHNOLOGY" element={<News country="in" category="TECHNOLOGY" ></News>} ></Route>
+      <Route exact path="/SPORTS" element={<News country="in" category="SPORTS" ></News>} ></Route>
+      <Route exact path="/ENTERTAINMENT" element={<News country="in" category="ENTERTAINMENT" ></News>} ></Route>
      </Routes>
     </Router>
   

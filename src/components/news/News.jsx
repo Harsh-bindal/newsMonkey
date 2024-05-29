@@ -12,26 +12,31 @@ export default function News({category,country}) {
     
     useEffect(()=>{
 
-        let url = `https://newsi-api.p.rapidapi.com/api/category?category=${category}&language=en&country=${country}&sort=top&page=1&limit=20`;
-        setLoading(true)
+        const url = `https://real-time-news-data.p.rapidapi.com/topic-headlines?topic=${category}&country=${country}&lang=en`;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': process.env.REACT_APP_API_ID,
-                'X-RapidAPI-Host': 'newsi-api.p.rapidapi.com'
+                'x-rapidapi-key': process.env.REACT_APP_API_ID,
+                'x-rapidapi-host': 'real-time-news-data.p.rapidapi.com'
             }
-        }    
+        };
+
         
+       
         const fetchData =async()=>{
             
             try {
+                setLoading(true);
                 const response = await fetch(url, options);
-                const result = await response.json();
-                setData(result)
-                setLoading(false)
-                
+                const result = await response.text();
+                 const parsedData=JSON.parse(result);
+                 setData(parsedData.data);
+                 console.log(parsedData);
+                setLoading(false);
             } catch (error) {
-                console.error(error); }
+                console.error(error);
+            }
+            
             };
             
             fetchData();
@@ -44,10 +49,12 @@ export default function News({category,country}) {
       <>
       <h3 className='heading' >News Monkey Top {category} Headlines</h3>
       {loading && <Spinner></Spinner>}
+      
       <div className='cards'>
 
-       {!loading && data.map((d)=><Newsitem key={d._id} source={d.sourceName} title={d.title} link={d.link} photo={d.image} time={d.publishedAt}  ></Newsitem>)}      
+       {!loading && data.map((d,i)=><Newsitem key={i}  title={d.title} link={d.link} photo={d.photo_url} time={d.published_datetime_utc}  ></Newsitem>)}      
      
+
     </div>
       </>
       
